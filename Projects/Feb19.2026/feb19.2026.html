@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Observing Iran on X - Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../../index.html" class="logo">Mediated Worlds</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../../index.html">Archive</a></li>
+							
+							<li><a href="../../aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+									<li><a href="https://github.com/mediatedworlds" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.instagram.com/mediatedworlds" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://linkedin.com/in/parisa-salimi" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">February 19, 2026</span>
+									<h1><a href="..\..\Projects\Feb19.2026\feb19.2026.html">Observing Iran on X:  <br />
+									Munich demonstration on February 14 </a></h1>
+									 
+								</header>
+								
+								<div class="image main"><img src="..\..\Projects\Feb19.2026\Retweets_HighClustering.jpg" alt="" /></div>
+
+								
+								<p>On February 15, 2026, the X account of the Munich Police reported the number of Iranian demonstrators who had responded to a protest call by Reza Pahlavi, the son of Mohammad Reza Pahlavi, the last shah of Iran.<sup>1</sup> The post appeared during the Munich Security Conference, a moment when questions about Iran’s political future were already circulating in international media.</p>
+								<p>Within hours, the post became a focal point of online reaction. Although the dataset analyzed here spans from January 26 to February 17, 2026, nearly 87 percent of all engagements occurred on February 16 alone.</p>
+								<h4>Methods:</h4>
+								<p>To understand how this debate was structured online, I visualized the social network of approximately 4,500 accounts that engaged in the discourse through retweets using Gephi. Community biases were interpreted based on their most frequently used hashtags. Using modularity detection (Louvain method), alongside measures such as the clustering coefficient and betweenness centrality,<sup>2</sup> the project examines how communities formed around the tweet and how information flowed between them.</p>
+								<h4>Process:</h4>
+								<p>I examined each community to determine which ideas they supported. Since retweeting a post indicates alignment or like-mindedness, I filtered the dataset to include only retweets and visualized the following event graph modularity detection in Gephi (Louvain method).</p>
+								<div class="image main"><img src="..\..\Projects\Feb19.2026\Retweets.jpg" alt="" /></div>
+								<p>The graph is not necessarily separated by language but rather by ideological identities.<br />
+								After going through the tweets, it was clear that the communities that formed around news relevant to Iran were the purple, black, pink, and cyan clusters, with the pink and black clusters being the most polarized.</p>
+								<b>Top hashtags in the pink cluster (entire event graph):</b>
+								<p>•	[416] msc2026<br />
+									•	[24] no2shahno2mullahs<br />
+									•	[17] iran<br />
+									•	[16] munich<br />
+									•	[12] munichsecurityconference2026
+								</p>
+								<b>Top hashtags in the black cluster (entire event graph):</b>
+								<p>•	[133] msc2026<br />
+									•	[26] munich<br />
+									•	[13] iranrevolution2026<br />
+									•	[13] kingrezapahlavi<br />
+									•	[8] muenchen
+								</p>
+								<div class="image main"><img src="..\..\Projects\Feb19.2026\Retweets-Tweets.jpg" alt="" /></div>
+								<p>Although the visualizations in this exploration are derived from the retweet network, the clustering coefficient and betweenness centrality were calculated using the full interaction graph, which includes retweets, quotes, mentions, mentions in retweets, and mentions in replies.</p>
+								<p>After retaining only the nodes with high clustering coefficients, a measure of how strongly a node is connected to a tightly knit neighborhood,<sup>3</sup> and visualizing their retweet graph, the purple and cyan clusters disappeared. This suggests that these were not cohesive communities but rather social hubs. Among the remaining black and pink clusters, the size of the pink cluster was reduced by half, while the black cluster remained stable. This indicates that the black cluster is highly cohesive and strongly connected internally, with limited interaction outside its group. In such tightly connected or homophilic communities, information and misinformation tend to spread more rapidly because messages circulate among receptive and densely connected users.</p>
+								<div class="image main"><img src="..\..\Projects\Feb19.2026\Retweets_HighClustering.jpg" alt="" /></div>
+								<p>To examine how information flows between groups, it is necessary to identify users who act as bridges between clusters. This bridging role is measured through betweenness centrality. Without these intermediary users, clusters remain isolated within their own ideological bubbles and are less likely to encounter opposing or diverse viewpoints. The following visualization shows the network after retaining only nodes with high betweenness centrality.</p>
+								<div class="image main"><img src="..\..\Projects\Feb19.2026\Retweets-HighBetweenness.jpg" alt="" /></div>
+								<p>After this reduction (removing the bottom 0.05), the overall density of the graph decreased significantly, indicating that most retweets occurred within ideological communities rather than across them.</p>
+								<p>The purple cluster remained absent, reinforcing the conclusion that it functioned as a hub rather than a cohesive community. The black cluster lost much of its density, suggesting that although it was internally cohesive, it remained structurally isolated from the broader network. In contrast, the cyan cluster reappeared, indicating its structural importance in connecting the broader discussion of the 2026 Munich Security Conference with Iran-related news.</p>
+								<p>The pink community remained expanded. However, it is still isolated, indicating that its members participated in the discourse using similar hashtags but relied on inside-community news sources. The expansion of the pink cluster following the filtering process suggests that it consisted of several internally connected subgroups rather than a single centralized figure.</p>
+								<p style="color: rgb(0, 132, 255);">Overall, the network analysis shows that interactions around the discourse resulted in cohesive but largely isolated communities. The black cluster was highly cohesive and stable, forming a single, tightly connected community, while the pink cluster consisted of several internally connected subgroups. Both clusters were ideologically homophilous, and information circulated primarily within these aligned groups, with limited interaction across the broader network. The purple and cyan clusters primarily functioned as hubs or connectors within the network.</p>
+							</section>
+							
+							<section class="post">
+							<h2>References</h2>
+							<p>
+								
+								<li><a href="https://www.euronews.com/2026/02/14/hundreds-of-thousands-gather-in-munich-demanding-regime-change-in-iran-amid-ongoing-protes">1.Euronews. (2026, February 5). Hundreds of thousands gather in Munich demanding regime change in Iran amid ongoing protests.</a></li>
+								<li><a href="https://cambridge-intelligence.com/keylines-faqs-social-network-analysis/">2.Cambridge Intelligence. (2020). Social network analysis 101: Centrality measures explained. </a></li>
+								<li><a href="https://doi.org/10.1038/s41598-022-26913-5">3.Stein, J., Keuschnigg, M., & van de Rijt, A. (2023). Network segregation and the propagation of misinformation.  </a></li>
+								<li><a href="https://github.com/mediatedworlds/mediatedworlds.github.io/blob/main/Data/Munich14%20Dataset.xlsx">4.Dataset used for analysis using the NodeXL tool  </a></li>
+								<li><a href="https://www.smrfoundation.org/?_gl=1%2Ab7ox5q%2A_up%2AMQ..%2A_gs%2AMQ..&gclid=Cj0KCQiA7-rMBhCFARIsAKnLKtD3ppIdIpJA5pqJ0lzhO7huYzhZknjaNyJO2xZO-1TgGjfss7GH76saAgowEALw_wcB&gbraid=0AAAAAB-I9SvgMDUpvU9a77Va0boEd3fLo">5.The Social Media Research Foundation. (2016–2021). NodeXL </a></li>
+							</p>
+							</section>
+							<section class="post">
+								<h2>Similar posts</h2>
+								<a href="..\..\Projects\ymr.x\ymrx.html">ymr.x: Partisan Polarization on X</a>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+						<footer id="footer">
+					
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">parisasalimi@mail.de</a></p>
+							</section>
+							<section>
+								<h3>Social Media</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/mediatedworlds" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.instagram.com/mediatedworlds" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://linkedin.com/in/parisa-salimi" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

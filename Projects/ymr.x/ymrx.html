@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ymr.x - Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../../index.html" class="logo">Mediated Worlds</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../../index.html">Archive</a></li>
+							
+							<li><a href="../../aboutme.html">About Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/mediatedworlds" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.instagram.com/mediatedworlds" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://linkedin.com/in/parisa-salimi" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">September 17, 2025</span>
+									<h1>ymr.x<br />
+									Partisan Polarization on X</h1>
+									<p>This project traces the geometry of social media networks, revealing how information<br />
+									and belief flow through echo chambers. Through interactive visualization, users experience<br />
+									these dynamics as immersive spaces that make digital interactions visible.</p>
+								</header>
+								<div class="image main small"><img src="..\..\Projects\ymr.x\ymr.jpg" alt="" /></div>
+								<div class="align-center"><a href="https://ars.electronica.art/panic/de/view/ymr-x-21338ddb450c81438a0ade35119edd7c/" >ymr.x, Ars Electronica Festival 2025, Linz, Austria.</a></div>
+								<br />
+
+								<p>Social media is often said to connect people with different opinions from around the world. But is this really true? The reality is more complex.</p>
+								<p>On February 6, 2024, Tino Chrupalla, leader of the far-right political party Alternative für Deutschland (AfD), appeared on the talk show hosted by Markus Lanz on the German public broadcaster ZDF.<sup>1</sup> During the broadcast, he claimed that ZDF had withheld crucial video evidence of an alleged attack on him from the police. This sparked a heated discourse on X (formerly Twitter).</p>
+								<p>I used extracted relevant data from X using hashtags related to the event via the NodeXL platform.<sup>23</sup> The goal is to investigate and geometrically analyze the tweets and interactions related to this discourse.</p>
+								<p>Below is the primary event graph with data reduction applied. Each line represents a Twitter interaction (retweet, mention, mention in retweet, reply, quote, mention in reply, mention in quote). The entire graph was reduced to four major clusters, from which two main groups emerged. Group 1 comprises 3,281 members and 9,470 interactions, while Group 2 consists of 2,656 members and 8,443 interactions.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\MainEventGraph.jpg" alt="" /></div>
+								<p>The provided visualization shows the 25 most frequently used hashtags for the two main groups. Blue represents hashtags used by Group 1, while pink represents hashtags used by Group 2:</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\HashtagCount.jpg" alt="" /></div>
+								<p>After examining the bio descriptions of the members in the graph, the political leanings of accounts in Group 1 appeared to be mostly associated with far-right ideologies, while those in Group 2 aligned more closely with the center-left. In terms of politically charged hashtags, Group 2 frequently used #fckafd and #noafd, whereas Group 1 used #meinungsfreiheit. Hashtags can be interpreted based on the linguistic content and political context of their use, following the method described by Conover et al. (2011) for social media polarization analysis.<sup>4</sup></p>
+								<p>Below, you can see the percentage connections of each group within themselves and with the other groups. Among them, Groups 1 and 2 are the most isolated, with Group 2 having less than 2% of its interactions with the rest of the clusters.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\All-Interactions.jpg" alt="" /></div>
+								<p>Let’s compare two of the most important relationship networks: retweets and mentions in retweets.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\MentionsRetweets.jpg" alt="" /></div>
+								<p>Group 2 tends to have most of its interactions through mentions in tweets and the least through retweets, unlike the other groups, which primarily interact by retweeting other group members. Retweeting without mentioning someone in response or writing a comment (quoting) is a form of agreement with the tweet.</p>
+								<p>In terms of being under umbrellas of multiple opinions, we have two clusters: one consisting of Groups 1, 3, and 4, and the other of Group 2 alone. The isolation of Group 2 from the rest of the groups forms a polarized network within this discourse.</p>
+								<p>Below is the event graph for the highest impressions, showcasing the most influential interactions within the network:</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\Impressions.jpg" alt="" /></div>
+								<p>Comparing the two main groups, it is evident that the majority of impactful tweets from Group 1 stem from interactions with other groups, whereas Group 2 generates significant insights from interactions within its own bubble. This underscores the independent identity and survival of Group 2 as a cluster, distinct from interactions with other groups.</p>
+								<h2>Networks of power:</h2>
+								<h3>Betweenness Centrality:<sup>5</sup></h3>
+								<p>This measures how often a node appears on the shortest path between other nodes. A high betweenness centrality can indicate a node’s control over information flow within the network</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\HighBetweenness.jpg" alt="" /></div>
+								<p>The data has been further reduced to focus on users who wield even greater influence over the flow of information.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\HigherBetweenness.jpg" alt="" /></div>
+								<p>Comparing the two graphs, it's evident that the size of Group 1's network reduced compared to Group 2, which maintained almost the same power flow within its network after this data reduction. This suggests that the distribution of power over information flow is more evenly spread among members of Group 2 than Group 1.</p>
+								<h3>Closeness centrality:</h3>
+								<p>It is defined as the reciprocal of the sum of the shortest path distances of a node to all other nodes in the graph. Therefore, a node with high closeness centrality has short distances to all other nodes of a graph. Closeness can be regarded as a measure of how long it will take to spread information from v to all other nodes sequentially.</p>
+								<p>Let's compare the graphs based on control over information flow and the speed of information dissemination.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\BetweennessCloseness.jpg" alt="" /></div>
+								<p>The size of the networks for Groups 1 and 3 and 4 remains unchanged in both graphs, but there is a decrease in the size of the network for Group 2. Therefore, the power that Group 2 holds over information spread is attributed to its evenly distributed information flow within the community rather than the speed at which information moves among its members.</p>
+								<h3>Clustering Coefficient:</h3>
+								<p>It measures the extent to which nodes in a network form clusters or tightly knit groups. A high clustering coefficient suggests that the network is prone to forming cohesive subgroups, which can influence the spread of information or behavior within the network.</p>
+								<div class="image main"><img src="..\..\Projects\ymr.x\BetweennessClustering.jpg" alt="" /></div>
+								<p>As the graph of Group 1 loses density, Group 2 remains the same when comparing the networks of members controlling information and the most influential members in terms of spreading opinions and behaviors.</p>
+								<p style="color: rgb(0, 132, 255);">This analysis reveals distinct patterns in social media dynamics between Group 1 and Group 2. While Group 1 shows a reduction in network density, Group 2 maintains a denser and more evenly distributed influence among its members in controlling information flow and influencing opinions and behaviors. These insights highlight the complex nature of information dissemination within partisan networks and underscore the varying strategies employed by different groups to shape discourse. Understanding these dynamics is crucial for grasping the evolving landscape of digital communication and its impact on societal polarization.</p>
+
+								<b>The research presented here was implemented as an audiovisual installation at the Ars Electronica Festival 2025 in Linz, Austria, in collaboration with Maximilian Götz.</b>
+								<li><a href="https://ars.electronica.art/panic/de/view/ymr-x-21338ddb450c81438a0ade35119edd7c/">ymr.x, Ars Electronica Festival 2025, Linz, Austria.</a></li>
+							</section>
+
+							<section class="post">
+							<h2>References</h2>
+							<p>
+								<li><a href="https://rp-online.de/politik/deutschland/markus-lanz-tino-chrupalla-findet-keine-rechtsextremen-in-afd_aid-106608951">1.Rheinische Post. (2024, February 7). Markus Lanz: Tino Chrupalla findet keine Rechtsextremen in AfD</a></li>
+								<li><a href="https://github.com/mediatedworlds/mediatedworlds.github.io/tree/main/Data">2.Dataset used for analysis using the NodeXL tool</a></li>
+								<li><a href="https://www.smrfoundation.org/?_gl=1%2Ab7ox5q%2A_up%2AMQ..%2A_gs%2AMQ..&gclid=Cj0KCQiA7-rMBhCFARIsAKnLKtD3ppIdIpJA5pqJ0lzhO7huYzhZknjaNyJO2xZO-1TgGjfss7GH76saAgowEALw_wcB&gbraid=0AAAAAB-I9SvgMDUpvU9a77Va0boEd3fLo">3.The Social Media Research Foundation. (2016–2021). NodeXL</a></li>
+								<li>4.Conover et al. (2011). Political polarization on Twitter</li>
+								<li><a href="https://cambridge-intelligence.com/keylines-faqs-social-network-analysis/">5.cambridge-intelligence. (2020). Social network analysis 101: centrality measures explained</a></li>
+								
+							</p>
+							</section>
+							<section class="post">
+								<h2>Similar posts</h2>
+								<a href="..\..\Projects\Feb19.2026\feb19.2026.html">Observing Iran on X: Munich demonstration on February 14 </a>
+							</section>
+
+					</div>
+
+				<!-- Footer --> 
+						<footer id="footer">
+					
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">parisasalimi@mail.de</a></p>
+							</section>
+							<section>
+								<h3>Social Media</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/mediatedworlds" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.instagram.com/mediatedworlds" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://linkedin.com/in/parisa-salimi" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
