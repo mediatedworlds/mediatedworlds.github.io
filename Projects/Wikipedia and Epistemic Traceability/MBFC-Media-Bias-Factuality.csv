@@ -1,0 +1,427 @@
+﻿Source,X,Y,Country,Media_Type
+The New York Times,-410,140,USA,Global Media
+The Washington Post,-360,210,USA,Global Media
+The Guardian,-360,180,UK,Global Media
+CNN,-360,370,USA,Global Media
+Fox News,800,760,USA,Global Media
+MSNBC,-640,500,USA,Global Media
+CBS News,220,380,USA,Global Media
+USA Today,-280,210,USA,Global Media
+ABC News,-330,110,USA,Global Media
+Bloomberg,-240,220,USA,Global Media
+France 24,-175,100,France,Global Media
+Al Jazeera,-320,470,Qatar,Global Media
+BusinessWeek,-240,NULL,USA,Global Media
+PBS,-240,100,USA,Global Media
+Military Times,-110,100,USA,Global Media
+Novinite,-80,270,Bulgaria,Global Media
+The Independent,-360,500,UK,Global Media
+BBC News,150,210,UK,Global Media
+Los Angeles Times,150,100,USA,Global Media
+San Francisco Chronicle,-370,100,USA,Global Media
+U.S. News & World Report,-260,110,USA,Global Media
+The Huffington Post,-640,360,USA,Global Media
+NULL,NULL,NULL,NULL,Global Media
+The Australian,370,520,Australia,Global Media
+Asia Times,-80,410,Hong Kong,Global Media
+The Wall Street Journal,420,240,USA,Global Media
+Telegram & Gazette,NULL,NULL,USA,Global Media
+Herald Sun,250,300,Australia,Global Media
+News.trend.az,NULL,NULL,Azerbaijan,Global Media
+International Herald Tribune,-50,100,USA,Global Media
+The Christian Science Monitor,-70,70,USA,Global Media
+Journal-Gazette,-70,100,USA,Global Media
+The Atlantic,-330,100,USA,Global Media
+Cape Cod Times,-50,160,USA,Global Media
+NBC News,-360,100,USA,Global Media
+The Sydney Morning Herald,-230,100,Australia,Global Media
+The Jerusalem Post,290,340,Israel,Global Media
+The Local Denmark,-300,170,Denmark,Global Media
+Daily Star,-200,140,USA,Global Media
+Hurriyet Daily News,550,500,Turkey,Global Media
+The Star,600,500,Malaysia,Global Media
+Chicago Daily Observer,NULL,NULL,NULL,Global Media
+The Hill,40,220,USA,Global Media
+DW,-250,90,Germany,Global Media
+Iraqi News,590,500,Iraq,Global Media
+The Spectator ,440,290,UK,Global Media
+The Week,-620,170,USA,Global Media
+UPI,160,100,USA,Global Media
+Arab Times,NULL,NULL,Saudi Arabia,Global Media
+Haaretz,-520,150,Israel,Global Media
+Ynetnews,-360,140,Israel,Global Media
+CBC News,-330,100,Canada,Global Media
+Newsweek,280,260,USA,Global Media
+The Nation,-640,190,USA,Global Media
+Daily Telegraph,640,490,UK,Global Media
+Time Magazine,-400,120,USA,Global Media
+The Age,-600,190,Australia,Global Media
+Free Internet Press,-390,100,USA,Global Media
+El Pais,-250,100,Spain,Global Media
+VOA,-80,100,USA,Global Media
+NDTV / Indian Express,480,620,India,Global Media
+The Diplomat,-40,110,Japan,Global Media
+The Chicago Tribune,300,100,USA,Global Media
+US Department of State,NULL,NULL,NULL,Official
+US Department of Defense / Pentagon / DoD / Defenselink,NULL,NULL,NULL,Official
+UK Ministry of Defence,NULL,NULL,NULL,Official
+US Department of Labor,NULL,NULL,NULL,Official
+Library of Congress,NULL,NULL,NULL,Official
+George W. Bush / White House,NULL,NULL,NULL,Official
+Military Casualty Information,NULL,NULL,NULL,Official
+Australian Department of Defence,NULL,NULL,NULL,Official
+US Army / US Army Center of Military History / army.mil / news briefings,NULL,NULL,NULL,Official
+US Navy,NULL,NULL,NULL,Official
+Central Intelligence Agency,NULL,NULL,NULL,Official
+Justice.gov / DOJ,NULL,NULL,NULL,Official
+Embassy of the United States,NULL,NULL,NULL,Official
+Hansard / UK Parliament,NULL,NULL,NULL,Official
+C-SPAN,NULL,NULL,NULL,Official
+U.S. Congressional Reports / CBO,NULL,NULL,NULL,Official
+U.S. Government Printing Office,NULL,NULL,NULL,Official
+Multi-National Force – Iraq,NULL,NULL,NULL,Official
+American Forces Press Service,NULL,NULL,NULL,Official
+Office of the Director of National Intelligence,NULL,NULL,NULL,Official
+U.S. Institute of Peace Press,NULL,NULL,NULL,Official
+ReliefWeb,NULL,NULL,NULL,NGO / Policy / Advocacy
+Council on Foreign Relations / CFR,90,100,USA,NGO / Policy / Advocacy
+Project on Defense Alternatives,NULL,NULL,NULL,NGO / Policy / Advocacy
+Brookings Institution,-270,0,USA,NGO / Policy / Advocacy
+Center for American Progress,-670,480,USA,NGO / Policy / Advocacy
+CSIS / Center for Strategic and International Studies,NULL,0,USA,NGO / Policy / Advocacy
+Institute for the Study of War,400,250,USA,NGO / Policy / Advocacy
+Washington Institute,690,480,USA,NGO / Policy / Advocacy
+Pew Research Center,0,0,USA,NGO / Policy / Advocacy
+ICM Research,NULL,NULL,NULL,NGO / Policy / Advocacy
+Arab American Institute,NULL,NULL,NULL,NGO / Policy / Advocacy
+Oil Change International / Institute for Policy Studies / War on Want / Platform / Global Policy Forum,NULL,NULL,NULL,NGO / Policy / Advocacy
+Red Crescent,NULL,NULL,NULL,NGO / Policy / Advocacy
+Oxfam,NULL,NULL,USA,NGO / Policy / Advocacy
+Alertnet.org,-690,180,USA,NGO / Policy / Advocacy
+Green Party,NULL,NULL,NULL,NGO / Policy / Advocacy
+Human Rights Watch,-360,120,USA,NGO / Policy / Advocacy
+Amnesty International,-350,100,UK,NGO / Policy / Advocacy
+MADRE / Organization of Women's Freedom in Iraq,NULL,NULL,NULL,NGO / Policy / Advocacy
+Inter Press Service (IPS),-420,170,Italy,NGO / Policy / Advocacy
+Middle East Institute,0,250,USA,NGO / Policy / Advocacy
+Human Rights News,NULL,NULL,NULL,NGO / Policy / Advocacy
+Association for Diplomatic Studies & Training,NULL,NULL,NULL,NGO / Policy / Advocacy
+Scarecrow Press,NULL,NULL,NULL,Academic / Journals / Books
+Strategic Studies Institute (SSI),0,100,USA,Organization/Foundation
+The Lancet,0,0,UK,Academic / Journals / Books
+New England Journal of Medicine,0,0,USA,Academic / Journals / Books
+PLOS Medicine,-30,40,USA,Academic / Journals / Books
+Politics and the Life Sciences,NULL,NULL,NULL,Academic / Journals / Books
+Army History (JSTOR),0,0,USA,Organization/Foundation
+Intelligence and National Security,NULL,NULL,NULL,Academic / Journals / Books
+Liverpool University Press,NULL,NULL,NULL,Academic / Journals / Books
+Oxford University Press,NULL,NULL,NULL,Academic / Journals / Books
+The American Institute of Physics (AIP),0,0,USA,Organization/Foundation
+Environmental Health Journal,-50,50,UK,Organization/Foundation
+Medicine Conflict and Survival,NULL,NULL,NULL,Academic / Journals / Books
+Conflict and Health,NULL,NULL,NULL,Academic / Journals / Books
+Environmental Politics,NULL,NULL,NULL,Academic / Journals / Books
+Washington Quarterly,NULL,NULL,NULL,Academic / Journals / Books
+Fletcher School Tufts University,NULL,NULL,NULL,Academic / Journals / Books
+London Review of Books,NULL,NULL,NULL,Academic / Journals / Books
+Gunaratna Rohan,NULL,NULL,NULL,Academic / Journals / Books
+Stephen Eric Bronner & Kurt Jacobsen,NULL,NULL,NULL,Academic / Journals / Books
+Hafez Mohammed M.,NULL,NULL,NULL,Academic / Journals / Books
+Bob Woodward – Plan of Attack / The War Within,NULL,NULL,NULL,Academic / Journals / Books
+Robert Fisk – The Great War for Civilisation,NULL,NULL,NULL,Academic / Journals / Books
+Thomas E. Ricks – Fiasco,NULL,NULL,NULL,Academic / Journals / Books
+Mike Tucker & Charles Faddis – Operation Hotel California,NULL,NULL,NULL,Academic / Journals / Books
+John Keegan – The Iraq War,NULL,NULL,NULL,Academic / Journals / Books
+Bing West & Ray L. Smith – The March Up,NULL,NULL,NULL,Academic / Journals / Books
+Michael R. Gordon & Bernard E. Trainor – Cobra II & The Endgame,NULL,NULL,NULL,Academic / Journals / Books
+Philippe Sands – A Grand and Disastrous Deceit,NULL,NULL,NULL,Academic / Journals / Books
+Ephraim Kahana & Muhammad Suwaed – The A to Z of Middle Eastern Intelligence,NULL,NULL,NULL,Academic / Journals / Books
+W.W. Norton & Company / 9-11 Commission Report,NULL,NULL,NULL,Academic / Journals / Books
+Penguin Books,NULL,NULL,NULL,Academic / Journals / Books
+UN / UNSCOM,NULL,NULL,NULL,NULL
+UN / Kofi Annan statements / UN Security Council,NULL,NULL,NULL,NULL
+UN News Centre,-440,100,USA,Organization/Foundation
+United Nations / UNAMI,NULL,NULL,NULL,NULL
+International Organization for Migration,NULL,NULL,NULL,NULL
+IEA,-110,110,France,Organization/Foundation
++972 Magazine,-470,150,Israel,Global Media
+AOAV,-480,150,UK,Organization/Foundation
+Africanews,-550,300,France,Global Media
+Al Arabiya,500,500,Saudi Arabia,Global Media
+Al Hadath,NULL,NULL,NULL,NULL
+American Journal of Intl Law,NULL,NULL,NULL,NULL
+Anadolu Agency,800,500,Turkey,Global Media
+Arab Center Washington DC,NULL,NULL,NULL,NULL
+Asharq Al-Awsat,450,500,UK,Global Media
+Associated Press,-210,80,USA,Global Media
+Axis of Resistance / SUNY Press,NULL,NULL,NULL,NULL
+"Boston University, Intl Human Rights Clinic",NULL,NULL,NULL,NULL
+BreakingNews.ie,-300,100,Ireland,Global Media
+Bundesregierung (Germany),NULL,NULL,NULL,NULL
+B’Tselem,-750,300,Israel,Organization/Foundation
+CIA World Factbook,NULL,NULL,NULL,NULL
+CNBC,-330,220,USA,Global Media
+Channel 4 News,-390,120,UK,Global Media
+Committee to Protect Journalists (CPJ),0,100,USA,Organization/Foundation
+Democratization Journal,NULL,NULL,NULL,NULL
+Doctors Without Borders,0,100,France,Organization/Foundation
+ElDiario.es,-460,150,Spain,Global Media
+Encyclopedia Britannica,-20,50,USA,Academic / Journals / Books
+Financial Times,40,100,UK,Global Media
+Foreign Affairs,130,NULL,USA,Global Media
+Forensic Architecture,NULL,NULL,NULL,NULL
+Foundation for Defense of Democracies,600,360,USA,Organization/Foundation
+Free Press Kashmir,NULL,NULL,NULL,NULL
+G1,NULL,NULL,NULL,NULL
+Globes (Israel),-180,100,Israel,Global Media
+Hamas,NULL,NULL,NULL,NULL
+Henry Holt and Company,NULL,NULL,NULL,NULL
+House of Commons Library,NULL,NULL,NULL,NULL
+IPC (Famine Monitoring),NULL,NULL,NULL,NULL
+International Committee of the Red Cross (ICRC),NULL,NULL,NULL,NULL
+International Criminal Court,NULL,NULL,NULL,NULL
+International Federation for Human Rights,NULL,NULL,NULL,NULL
+International Institute for Strategic Studies (IISS),NULL,NULL,NULL,NULL
+Israel Democracy Institute,NULL,NULL,NULL,NULL
+Israel Hayom,NULL,NULL,Israel,Global Media
+Arutz Sheva (Israel National News),NULL,NULL,Israel,Global Media
+Israeli Government / gov.il / IDF,NULL,NULL,NULL,NULL
+Jewish News Syndicate,360,460,USA,Organization/Foundation
+The Jordan Times,-100,500,Jordan,Global Media
+Journal of Genocide Research,NULL,NULL,NULL,NULL
+Journal of Palestine Studies,NULL,NULL,NULL,NULL
+Journal of Public Health,-50,NULL,Switzerland,Academic / Journals / Books
+Knesset.gov.il,NULL,NULL,NULL,NULL
+Le Monde,-340,100,France,Global Media
+Mako (Hebrew),NULL,NULL,NULL,NULL
+Middle East Eye,-350,220,UK,Global Media
+Middle East Monitor,-610,500,UK,Organization/Foundation
+Modern War Institute,NULL,NULL,NULL,NULL
+NPR,-280,90,USA,Global Media
+Other Press (Gaza Faces History),NULL,NULL,NULL,NULL
+Palestinian Authority,NULL,NULL,NULL,NULL
+Physicians for Human Rights – Israel,NULL,NULL,NULL,NULL
+RTE,NULL,NULL,Ireland,Global Media
+Refugees International,NULL,NULL,NULL,NULL
+Reuters,-50,0,UK,Global Media
+Routledge / Routledge Handbook,NULL,NULL,NULL,NULL
+Saudi / Qatari Governments,NULL,NULL,NULL,NULL
+Security Praxis,NULL,NULL,NULL,NULL
+Sky News,100,100,UK,Global Media
+South China Morning Post,-290,480,Hong Kong,Global Media
+The Economic Times,320,550,India,Global Media
+The Economist,40,80,UK,Global Media
+The New Arab,-360,410,UK,Global Media
+The Round Table: Commonwealth Journal,NULL,NULL,NULL,NULL
+The Times of India,290,510,India,Global Media
+The Times of Israel,-250,180,Israel,Global Media
+UN OCHA,NULL,NULL,NULL,NULL
+OHCHR,-250,100,Switzerland,Organization/Foundation
+UN Security Council,NULL,NULL,NULL,NULL
+UNRWA,-800,500,Jordan,Organization/Foundation
+US Government / USAID,NULL,NULL,NULL,NULL
+University of California Press,NULL,NULL,NULL,NULL
+Vox,-640,190,USA,Global Media
+World Health Organization (WHO),-100,70,Switzerland,Organization/Foundation
+Wafa,NULL,NULL,NULL,NULL
+The Watson Center,-210,150,USA,Organization/Foundation
+World Bank / EU / UN report,NULL,NULL,NULL,NULL
+Yale University Press,NULL,NULL,NULL,NULL
+i24NEWS,400,550,Israel,Global Media
+news.artnet.com,NULL,NULL,NULL,NULL
+9/11 Commission Report,NULL,NULL,NULL,Official
+WNEP,-60,100,USA,Global Media
+ANSAMed,NULL,NULL,NULL,Global Media
+AFP (Agence France Presse),-210,50,France,Global Media
+Al Qaeda Now,NULL,NULL,NULL,Organization/Foundation
+American Conservative,600,300,USA,Global Media
+Architectural Record,NULL,NULL,NULL,Organization/Foundation
+Architecture Week,NULL,NULL,NULL,Organization/Foundation
+Arlington National Cemetery,NULL,NULL,NULL,Official
+ABC News Australia,-280,100,Australia,Global Media
+Ball State University,NULL,NULL,NULL,Academic / Journals / Books
+Baudrillard,NULL,NULL,NULL,Academic / Journals / Books
+Broadcast Engineering,NULL,NULL,NULL,Organization/Foundation
+Broadcasting & Cable,NULL,NULL,NULL,Organization/Foundation
+CBS New York,-270,100,USA,Global Media
+Centers for Disease Control and Prevention,680,610,USA,Official
+Construction Equipment Guide,NULL,NULL,NULL,Organization/Foundation
+Costs of War,NULL,NULL,NULL,NGO / Policy / Advocacy
+DNAinfo New York,NULL,NULL,NULL,Global Media
+Daily Mirror,-480,600,UK,Global Media
+New York Daily News,-390,100,USA,Global Media
+Der Spiegel,NULL,NULL,Germany,Global Media
+Discovery News,NULL,NULL,USA,Global Media
+Evening Standard,390,240,UK,Global Media
+Federal Bureau of Investigation,NULL,NULL,NULL,Official
+Federal Emergency Management Agency,NULL,NULL,NULL,Official
+Federation of American Scientists,NULL,NULL,USA,Organization/Foundation
+Forbes,130,200,USA,Global Media
+Frontline,NULL,NULL,NULL,Global Media
+Gallup,140,240,USA,Organization/Foundation
+Group of Eight,NULL,NULL,NULL,Organization/Foundation
+ISNA,NULL,NULL,NULL,Organization/Foundation
+India Abroad,NULL,NULL,NULL,Global Media
+Institute for the Analysis of Global Security,NULL,NULL,NULL,NGO / Policy / Advocacy
+Journal for the Psychoanalysis of Culture and Society,NULL,NULL,NULL,Academic / Journals / Books
+Journal of Human Resources,NULL,NULL,NULL,Academic / Journals / Books
+Journal of Performance of Constructed Facilities,NULL,NULL,NULL,Academic / Journals / Books
+Journal of the American Medical Association,-20,0,USA,Academic / Journals / Books
+Knight Ridder Washington Bureau,NULL,NULL,NULL,Global Media
+Lower Manhattan Construction Command Center,NULL,NULL,NULL,Official
+McClatchyDC,-330,100,USA,Global Media
+Mesothelioma Center - Vital Services for Cancer Patients & Families,NULL,NULL,NULL,Organization/Foundation
+Metro,-370,510,UK,Global Media
+Monthly Labor Review,NULL,NULL,NULL,Official
+NATO,NULL,NULL,NULL,Official
+NY1,-90,-80,USA,Global Media
+NYPD,NULL,NULL,NULL,Official
+National Commission Upon Terrorist Attacks in the United States,NULL,NULL,NULL,Official
+National Fire Protection Association,NULL,NULL,NULL,Organization/Foundation
+National Geographic,-150,100,USA,Global Media
+National Institute of Standards and Technology,NULL,NULL,USA,Organization/Foundation
+National Park Service,NULL,NULL,NULL,Official
+New York City Fire Department,NULL,NULL,NULL,Official
+New York Observer,400,170,USA,Global Media
+New York YIMBY,NULL,NULL,NULL,Organization/Foundation
+New Zealand Government,NULL,NULL,NULL,Official
+NewsHour,NULL,NULL,NULL,Global Media
+Newsday,-370,100,USA,Global Media
+Our World in Data,NULL,NULL,UK,Organization/Foundation
+Patriot Resource,NULL,NULL,NULL,Organization/Foundation
+Philadelphia Inquirer,-320,100,USA,Global Media
+Pittsburgh Post-Gazette,270,100,USA,Global Media
+Politico,-280,130,USA,Global Media
+Psychiatric Clinics of North America,NULL,NULL,NULL,Academic / Journals / Books
+Psychology Today,-210,100,USA,Global Media
+Purdue News Service,NULL,NULL,NULL,Academic / Journals / Books
+Realty Times,NULL,NULL,NULL,Organization/Foundation
+Rzeczpospolita,NULL,NULL,NULL,Global Media
+Seattle Post-Intelligencer,-500,200,USA,Global Media
+Sierra Club,-800,330,USA,NGO / Policy / Advocacy
+Sunday Times,340,170,UK,Global Media
+The Biography Channel,-70,100,USA,Global Media
+The Chief Leader,NULL,NULL,NULL,Global Media
+The Conversation,-90,0,Australia,Academic / Journals / Books
+The Indian Express,-200,550,India,Global Media
+The Journal of Asian Studies,NULL,NULL,NULL,Academic / Journals / Books
+The Mercury News,-330,100,USA,Global Media
+The National Security Archive,0,120,USA,Organization/Foundation
+The New Yorker,-650,140,USA,Global Media
+The Observer,-350,460,UK,Global Media
+The Port Authority,NULL,NULL,NULL,Official
+The Seattle Times,-340,100,USA,Global Media
+The Washington Times,420,640,USA,Global Media
+The White House,790,630,USA,Official
+Time Out New York,NULL,NULL,NULL,Global Media
+United States Department of Justice,NULL,NULL,NULL,Official
+United States Department of Transportation,NULL,NULL,NULL,Official
+Vanity Fair,-660,250,USA,Global Media
+WABC-TV,NULL,NULL,NULL,Global Media
+WNBC-TV,NULL,NULL,NULL,Global Media
+WNYW,-50,100,USA,Global Media
+WPVI-TV,-240,100,USA,Global Media
+Washington Examiner,380,220,USA,Global Media
+Zee News,NULL,NULL,India,Global Media
+stantec,NULL,NULL,NULL,Organization/Foundation
+NULL,NULL,NULL,NULL,NULL
+SFGate,-370,140,USA,Global Media
+The Long War Journal,360,150,USA,Global Media
+Foreign Policy Association,130,100,USA,Global Media
+NULL,NULL,NULL,NULL,NULL
+The Weekly Standard,560,150,USA,Global Media
+International Business Times,-320,300,USA,Global Media
+Hello News 352,NULL,NULL,NULL,NULL
+Asian Tribune,NULL,NULL,NULL,NULL
+Logos Journal,NULL,NULL,NULL,NULL
+KUT,NULL,NULL,NULL,NULL
+Falmouth Patch,NULL,NULL,NULL,NULL
+The Enterprise,NULL,NULL,NULL,NULL
+National Air and Space Museum,0,0,USA,Organization/Foundation
+People’s Daily,0,0,China,NULL
+USCIS,590,500,USA,Organization/Foundation
+UNHCR,0,0,Switzerland,Organization/Foundation
+The Wayback Machine,-185,150,USA,Organization/Foundation
+The Washington Institute for Near East Policy,690,480,USA,Organization/Foundation
+Talking Points Memo,630,220,USA,Global Media
+Politifact,-310,100,USA,Global Media
+Ayad Allawi,0,0,0,NULL
+"Cordesman, Anthony H",0,0,NULL,NULL
+Democracy Now,-640,100,USA,Global Media
+harvard kennedy school,0,0,NULL,NULL
+GlobalSecurity,-80,100,USA,Global Media
+,,,,
+Association of the United States Army,0,0,USA,Organization/Foundation
+Atlantic Council,340,100,USA,Organization/Foundation
+Cambridge University Press,0,0,,Academic / Journals / Books
+Chatham House,-30,100,UK,Organization/Foundation
+Demokratizatsiya,0,0,,Academic / Journals / Books
+Europe-Asia Studies,0,0,,Academic / Journals / Books
+European Court of Human Rights,0,0,,Organization/Foundation
+Gulf Times,330,610,UAE,Global Media
+ITV,150,280,UK,Global Media
+Informa,0,0,UK,
+Interfax-Ukraine,-210,480,Ukraine,Global Media
+JHU Press,0,0,,Academic / Journals / Books
+Jamestown Foundation,100,100,USA,Organization/Foundation
+Kyiv Independent,-300,150,Ukraine,Global Media
+Kyiv Post,-400,490,Ukraine,Global Media
+Lenta.ru,500,650,Russia,Global Media
+Neue Zurcher Zeitung,500,180,Switzerland,Global Media
+President of Russia,330,640,Russia,Organization/Foundation
+RAND Corporation,-100,80,USA,Organization/Foundation
+RIA Novosti,400,780,Russia,Global Media
+Radio Free Asia,-320,170,USA,Organization/Foundation
+Taylor & Francis,-50,50,UK,Organization/Foundation
+The Globe and Mail,280,120,Canada,Global Media
+The Interpreter Magazine,-200,120,USA,Global Media
+The Moscow Times,-370,160,Netherlands,Global Media
+Journal of Democracy,-270,30,USA,Academic / Journals / Books
+N-tv,500,250,Germany,Global Media
+ADL,-440,250,USA,Organization/Foundation
+Wired Magazine,-300,100,USA,Global Media
+Slate,-640,270,USA,Global Media
+United States Department of Homeland Security,810,820,USA,Organization/Foundation
+Arab News,500,500,Saudi Arabia,Global Media
+Axios,-280,90,USA,Global Media
+Bellingcat,-400,280,Netherlands,Global Media
+Berliner Zeitung,-300,250,USA,Global Media
+Business Insider,-330,230,USA,Global Media
+Chicago Council on Global Affairs,0,0,USA,Organization/Foundation
+Daily Sabah,590,490,Turkey,Global Media
+Euractiv,-600,180,Belgium,Global Media
+Euronews,-250,210,France,Global Media
+European Council on Foreign Relations,-450,160,Germany,Organization/Foundation
+European Parliament,0,0,France,Organization/Foundation
+Fortune,250,120,USA,Global Media
+Hindustan News Hub,0,0,,
+International Republican Institute,0,0,,
+Irish Times,-290,100,Ireland,Global Media
+Johns Hopkins University,0,0,,
+Kyiv International Institute of Sociology,0,0,,Organization/Foundation
+LSE Public Policy Review,0,0,,Organization/Foundation
+MSN News,-280,100,USA,Global Media
+Meduza,-700,190,Latvia,Global Media
+Nevada Current,-590,150,USA,Organization/Foundation
+RBC-Ukraine,-480,360,Ukraine,Global Media
+Radio Free Europe/Radio Liberty,-20,295,USA,Global Media
+Razumkov Centre,0,0,,
+Rolling Stone,-630,180,USA,Global Media
+Rossiyskaya Gazeta,400,600,Russia,Global Media
+Southeast European and Black Sea Studies,0,0,,
+Supreme Court of Ukraine,0,0,Ukraine,
+Russian News Agency,320,620,Russia,Global Media
+The Daily Beast,-660,460,USA,Global Media
+The Soufan Center,0,0,,
+UNIAN,0,0,,
+Wilson Center,-280,110,USA,Organization/Foundation
+Snopes,-280,120,USA,Global Media
+The Boston Globe,-320,100,USA,Global Media
+Airwars,0,110,UK,Organization/Foundation
+Committee to Protect Journalists,0,50,USA,Organization/Foundation
+Drop Site News,-640,220,USA,Global Media
+L'Orient Today,-230,180,Lebanon,Global Media
+Latin Times,-250,100,USA,Global Media
+NRC,-250,100,Netherlands,Global Media
+Responsible Statecraft,-500,300,USA,Organization/Foundation
+UNICEF,-400,100,USA,Organization/Foundation
