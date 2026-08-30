@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Poem Iris</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         CONTROL PANEL
+         ===================================================== -->
+
+    <aside class="controls">
+
+        <div class="control-header">
+            <h1>Poem Iris</h1>
+
+            <p>
+                A radial coordinate system for
+                short poems.
+            </p>
+        </div>
+
+
+        
+        <!-- SENTENCE COUNT -->
+
+        <section class="control-section">
+
+            <div class="section-title">
+                SENTENCES
+            </div>
+
+            <div class="number-control">
+
+                <button id="decreaseSentences">−</button>
+
+                <input
+                    id="sentenceCount"
+                    type="number"
+                    min="1"
+                    max="10"
+                    value="3"
+                >
+
+                <button id="increaseSentences">+</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SENTENCES -->
+
+        <section class="control-section">
+
+            <div class="section-title">
+                TEXT
+            </div>
+
+            <div
+                id="sentenceInputs"
+                class="sentence-inputs"
+            ></div>
+
+        </section>
+
+
+        <!-- COLOR -->
+
+        <section class="control-section">
+
+            <div class="section-title">
+                VISUALIZATION COLOR
+            </div>
+
+            <div class="color-control">
+
+                <input
+                    id="colorPicker"
+                    type="color"
+                    value="#D8FF00"
+                >
+
+                <div
+                    id="colorValue"
+                    class="color-value"
+                >
+                    #D8FF00
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONNECTION THICKNESS -->
+
+        <section class="control-section">
+
+            <div class="section-title">
+                WORD CONNECTION
+            </div>
+
+            <div class="slider-row">
+
+                <input
+                    id="connectionSlider"
+                    type="range"
+                    min="0.2"
+                    max="5"
+                    step="0.1"
+                    value="1"
+                >
+
+                <span id="connectionValue">
+                    1.0
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+
+        <section class="actions">
+
+            <button
+                id="redrawButton"
+                class="primary-button"
+            >
+                Redraw
+            </button>
+
+            <button id="downloadSVG">
+                Save PNG
+            </button>
+
+        </section>
+
+    </aside>
+
+
+    <!-- =====================================================
+         VISUALIZATION
+         ===================================================== -->
+
+    <main class="visualization">
+
+        <svg
+            id="iris"
+            xmlns="http://www.w3.org/2000/svg"
+        ></svg>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
