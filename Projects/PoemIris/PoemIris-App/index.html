@@ -33,7 +33,6 @@
         </div>
 
 
-        
         <!-- SENTENCE COUNT -->
 
         <section class="control-section">
@@ -44,7 +43,7 @@
 
             <div class="number-control">
 
-                <button id="decreaseSentences">−</button>
+                <button id="decreaseSentences" type="button">−</button>
 
                 <input
                     id="sentenceCount"
@@ -54,7 +53,7 @@
                     value="3"
                 >
 
-                <button id="increaseSentences">+</button>
+                <button id="increaseSentences" type="button">+</button>
 
             </div>
 
@@ -90,14 +89,14 @@
                 <input
                     id="colorPicker"
                     type="color"
-                    value="#D8FF00"
+                    value="#FFFFFF"
                 >
 
                 <div
                     id="colorValue"
                     class="color-value"
                 >
-                    #D8FF00
+                    #FFFFFF
                 </div>
 
             </div>
@@ -140,11 +139,15 @@
             <button
                 id="redrawButton"
                 class="primary-button"
+                type="button"
             >
                 Redraw
             </button>
 
-            <button id="downloadSVG">
+            <button
+                id="downloadSVG"
+                type="button"
+            >
                 Save PNG
             </button>
 
@@ -158,6 +161,92 @@
          ===================================================== -->
 
     <main class="visualization">
+
+        <!-- TOP BAR -->
+
+        <div class="visualization-topbar">
+
+            <button
+                id="aboutButton"
+                class="about-button"
+                type="button"
+            >
+                What is Poem Iris?
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             ABOUT PANEL
+             ================================================= -->
+
+        <div
+            id="aboutPanel"
+            class="about-panel"
+            aria-hidden="true"
+        >
+
+            <div class="about-content">
+
+                <button
+                    id="closeAbout"
+                    class="close-about"
+                    type="button"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+                <div class="about-label">
+                    ABOUT
+                </div>
+
+                <h2>
+                    What is Poem Iris?
+                </h2>
+
+                <p>
+                    I was thinking about sending a poem to a friend,
+                    but indirectly, somehow not through language,
+                    but through the way his iris looked.
+                    That's how I developed Poem Iris.
+                </p>
+
+                <p>
+                    Poem Iris translates words and sentences into
+                    a radial coordinate system. Instead of reading
+                    the poem as ordinary text, each sentence becomes
+                    a circular layer around the center.
+                </p>
+
+                <p>
+                    Each sentence becomes a circular layer. The words
+                    are distributed around the circle, and each word becomes
+                    a small space of its own. Within that space, 
+                    the letters are positioned according to two things: 
+                    their order in the word and their position in the alphabet.
+
+                    The first letter begins closer to the center, the next one 
+                    moves outward, and so on. At the same time, each letter 
+                    finds its position around the word according to its alphabetic value, from A to Z.
+
+                    The letters are then connected in the order in which they appear in the word. 
+                    This creates a visual trace of the language without displaying the language itself.
+                </p>
+
+                <p>
+                    In this way, the structure of the language becomes
+                    a visual pattern. The poem is still there, but its
+                    form can be experienced without reading it directly.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SVG -->
 
         <svg
             id="iris"

@@ -6,20 +6,14 @@
     box-sizing: border-box;
 }
 
-
 html,
 body {
-
     margin: 0;
     padding: 0;
-
     width: 100%;
     height: 100%;
-
     background: #000;
-
     color: #fff;
-
     font-family:
         Arial,
         Helvetica,
@@ -32,9 +26,7 @@ body {
    ========================================================= */
 
 body {
-
     display: flex;
-
     overflow: hidden;
 }
 
@@ -44,74 +36,36 @@ body {
    ========================================================= */
 
 .controls {
-
     width: 330px;
-
     height: 100vh;
-
     padding: 30px;
-
     background: #000;
-
-    border-right:
-        1px solid #252525;
-
+    border-right: 1px solid #252525;
     overflow-y: auto;
-
     flex-shrink: 0;
 }
 
 
 /* =========================================================
-   BRAND
+   CONTROL HEADER
    ========================================================= */
 
-.brand {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
+.control-header {
     margin-bottom: 42px;
 }
 
-
-.brand-mark {
-
-    width: 22px;
-    height: 22px;
-
-    border-radius: 50%;
-
-    background: #D8FF00;
-
-    box-shadow:
-        0 0 20px rgba(216, 255, 0, 0.25);
-}
-
-
-.brand h1 {
-
+.control-header h1 {
     margin: 0;
-
     font-size: 19px;
-
     font-weight: 500;
-
     letter-spacing: -0.3px;
 }
 
-
-.brand p {
-
-    margin: 4px 0 0;
-
+.control-header p {
+    margin: 6px 0 0;
     color: #777;
-
     font-size: 11px;
-
+    line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
@@ -121,21 +75,14 @@ body {
    ========================================================= */
 
 .control-section {
-
     margin-bottom: 32px;
 }
 
-
 .section-title {
-
     margin-bottom: 11px;
-
     color: #666;
-
     font-size: 9px;
-
     font-weight: 600;
-
     letter-spacing: 0.16em;
 }
 
@@ -145,84 +92,50 @@ body {
    ========================================================= */
 
 .number-control {
-
     display: flex;
-
     width: 100%;
 }
 
-
 .number-control button {
-
     width: 42px;
-
     height: 38px;
-
-    border:
-        1px solid #333;
-
+    border: 1px solid #333;
     background: #080808;
-
     color: #fff;
-
     font-size: 18px;
-
     cursor: pointer;
-
     transition:
         background 0.15s,
         border 0.15s;
 }
 
-
 .number-control button:hover {
-
     background: #161616;
-
     border-color: #555;
 }
 
-
 .number-control input {
-
     flex: 1;
-
     min-width: 0;
-
     height: 38px;
-
-    border-top:
-        1px solid #333;
-
-    border-bottom:
-        1px solid #333;
-
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
     border-left: none;
     border-right: none;
-
     background: #080808;
-
     color: #fff;
-
     text-align: center;
-
     outline: none;
-
     font-size: 13px;
 }
 
-
 .number-control input::-webkit-outer-spin-button,
 .number-control input::-webkit-inner-spin-button {
-
     -webkit-appearance: none;
-
     margin: 0;
 }
 
-
-.number-control input[type=number] {
-
+.number-control input[type="number"] {
     appearance: textfield;
 }
 
@@ -232,70 +145,42 @@ body {
    ========================================================= */
 
 .sentence-inputs {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 14px;
 }
 
-
 .sentence-field {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 6px;
 }
 
-
 .sentence-field label {
-
     color: #555;
-
     font-size: 9px;
-
     letter-spacing: 0.1em;
 }
 
-
 .sentence-field textarea {
-
     width: 100%;
-
     min-height: 65px;
-
     padding: 10px;
-
     resize: vertical;
-
-    border:
-        1px solid #292929;
-
+    border: 1px solid #292929;
     background: #070707;
-
     color: #ddd;
-
     outline: none;
-
     font-family:
         Arial,
         Helvetica,
         sans-serif;
-
     font-size: 12px;
-
     line-height: 1.45;
-
-    transition:
-        border 0.15s;
+    transition: border 0.15s;
 }
 
-
 .sentence-field textarea:focus {
-
     border-color: #555;
 }
 
@@ -305,40 +190,25 @@ body {
    ========================================================= */
 
 .color-control {
-
     display: flex;
-
     align-items: center;
-
     gap: 12px;
 }
 
-
 #colorPicker {
-
     width: 48px;
-
     height: 34px;
-
     padding: 0;
-
-    border:
-        1px solid #333;
-
+    border: 1px solid #333;
     background: #000;
-
     cursor: pointer;
 }
 
-
 .color-value {
-
     font-family:
         "Courier New",
         monospace;
-
     color: #aaa;
-
     font-size: 11px;
 }
 
@@ -348,73 +218,45 @@ body {
    ========================================================= */
 
 .slider-row {
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
 }
 
-
 #connectionSlider {
-
     flex: 1;
-
     appearance: none;
-
     height: 2px;
-
     background: #333;
-
     outline: none;
 }
 
-
 #connectionSlider::-webkit-slider-thumb {
-
     appearance: none;
-
     width: 13px;
     height: 13px;
-
     border-radius: 50%;
-
     background: #D8FF00;
-
     cursor: pointer;
-
     border: none;
 }
-
 
 #connectionSlider::-moz-range-thumb {
-
     width: 13px;
     height: 13px;
-
     border-radius: 50%;
-
     background: #D8FF00;
-
     cursor: pointer;
-
     border: none;
 }
 
-
 #connectionValue {
-
     min-width: 30px;
-
     color: #888;
-
     font-family:
         "Courier New",
         monospace;
-
     font-size: 11px;
-
     text-align: right;
 }
 
@@ -424,73 +266,44 @@ body {
    ========================================================= */
 
 .actions {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 7px;
-
     margin-top: 40px;
 }
 
-
 .actions button {
-
     width: 100%;
-
     height: 39px;
-
-    border:
-        1px solid #333;
-
+    border: 1px solid #333;
     background: #080808;
-
     color: #aaa;
-
     cursor: pointer;
-
     font-size: 9px;
-
     font-weight: 600;
-
     letter-spacing: 0.12em;
-
     text-transform: uppercase;
-
     transition:
         background 0.15s,
         color 0.15s,
         border 0.15s;
 }
 
-
 .actions button:hover {
-
     background: #151515;
-
     border-color: #555;
-
-    color: white;
+    color: #fff;
 }
 
-
 .actions .primary-button {
-
     background: #fff;
-
     color: #000;
-
     border-color: #fff;
 }
 
-
 .actions .primary-button:hover {
-
     background: #D8FF00;
-
     border-color: #D8FF00;
-
     color: #000;
 }
 
@@ -500,43 +313,150 @@ body {
    ========================================================= */
 
 .visualization {
-
     position: relative;
-
     flex: 1;
-
-    width:
-        calc(100vw - 330px);
-
+    width: calc(100vw - 330px);
     height: 100vh;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     overflow: hidden;
-
     background: #000;
 }
 
-
 #iris {
+    width: min(
+        calc(100vh - 50px),
+        calc(100vw - 370px)
+    );
 
-    width:
-        min(
-            calc(100vh - 50px),
-            calc(100vw - 370px)
-        );
-
-    height:
-        min(
-            calc(100vh - 50px),
-            calc(100vw - 370px)
-        );
+    height: min(
+        calc(100vh - 50px),
+        calc(100vw - 370px)
+    );
 
     display: block;
+}
+
+
+/* =========================================================
+   VISUALIZATION TOP BAR
+   ========================================================= */
+
+.visualization-topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.about-button {
+    pointer-events: auto;
+    border: none;
+    padding: 0;
+    background: transparent;
+    color: #666;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.about-button:hover {
+    color: #fff;
+}
+
+
+/* =========================================================
+   ABOUT PANEL
+   ========================================================= */
+
+.about-panel {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.88);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.about-panel.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.about-content {
+    position: relative;
+    width: min(620px, 90%);
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 48px;
+    border: 1px solid #292929;
+    background: #050505;
+}
+
+.about-label {
+    margin-bottom: 14px;
+    color: #666;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.about-content h2 {
+    margin: 0 0 28px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.about-content p {
+    margin: 0 0 18px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.close-about {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-about:hover {
+    color: #fff;
 }
 
 
@@ -547,43 +467,40 @@ body {
 @media (max-width: 800px) {
 
     body {
-
         flex-direction: column;
-
         overflow: auto;
     }
 
-
     .controls {
-
         width: 100%;
-
         height: auto;
-
         border-right: none;
-
-        border-bottom:
-            1px solid #252525;
+        border-bottom: 1px solid #252525;
     }
 
-
     .visualization {
-
         width: 100%;
-
         height: 75vh;
-
         min-height: 500px;
     }
 
-
     #iris {
-
         width: 94vw;
-
         height: 94vw;
-
         max-height: 70vh;
+    }
+
+    .visualization-topbar {
+        padding: 0 18px;
+    }
+
+    .about-panel {
+        padding: 20px;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 35px 25px;
     }
 
 }

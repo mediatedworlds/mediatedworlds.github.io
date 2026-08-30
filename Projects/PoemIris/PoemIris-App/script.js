@@ -1,5 +1,5 @@
 // ============================================================
-// SENTENCE IRIS
+// POEM IRIS
 // ============================================================
 
 
@@ -28,9 +28,6 @@ const LETTER_LINE_WIDTH = 1.2;
 
 const ALPHABET_LINE_WIDTH = 0.8;
 
-// Default value.
-// This can now be changed with the slider.
-
 let WORD_CONNECTION_WIDTH = 1.0;
 
 const LETTER_NODE_SIZE = 70;
@@ -39,13 +36,8 @@ const LETTER_NODE_SIZE = 70;
 // ============================================================
 // 3. VISUALIZATION COLOR
 // ============================================================
-//
-// Everything in the visualization uses this color.
-//
-// The center itself remains black.
-//
 
-let VIS_COLOR = "#ffffff";
+let VIS_COLOR = "#FFFFFF";
 
 
 // ============================================================
@@ -57,9 +49,7 @@ const alphabet = {};
 "abcdefghijklmnopqrstuvwxyz"
     .split("")
     .forEach((letter, index) => {
-
         alphabet[letter] = index + 1;
-
     });
 
 
@@ -67,29 +57,22 @@ const alphabet = {};
 // 5. DOM
 // ============================================================
 
-const svg =
-    document.getElementById("iris");
-
+const svg = document.getElementById("iris");
 
 const sentenceCountInput =
     document.getElementById("sentenceCount");
 
-
 const sentenceInputs =
     document.getElementById("sentenceInputs");
-
 
 const redrawButton =
     document.getElementById("redrawButton");
 
-
 const increaseButton =
     document.getElementById("increaseSentences");
 
-
 const decreaseButton =
     document.getElementById("decreaseSentences");
-
 
 const downloadButton =
     document.getElementById("downloadSVG");
@@ -102,7 +85,6 @@ const downloadButton =
 const colorPicker =
     document.getElementById("colorPicker");
 
-
 const colorValue =
     document.getElementById("colorValue");
 
@@ -114,17 +96,29 @@ const colorValue =
 const connectionSlider =
     document.getElementById("connectionSlider");
 
-
 const connectionValue =
     document.getElementById("connectionValue");
+
+
+// ============================================================
+// ABOUT CONTROLS
+// ============================================================
+
+const aboutButton =
+    document.getElementById("aboutButton");
+
+const aboutPanel =
+    document.getElementById("aboutPanel");
+
+const closeAbout =
+    document.getElementById("closeAbout");
 
 
 // ============================================================
 // 6. SENTENCE STATE
 // ============================================================
 
-let sentences =
-    [...defaultSentences];
+let sentences = [...defaultSentences];
 
 
 // ============================================================
@@ -141,21 +135,7 @@ function cleanWords(sentence) {
 
 
 // ============================================================
-// 8. POLAR → CARTESIAN
-// ============================================================
-//
-// SVG has:
-//
-// x → right
-// y → down
-//
-// We therefore invert the y direction
-// to behave like the mathematical coordinate system.
-//
-// angle = 90° → TOP
-//
-// decreasing angle → CLOCKWISE
-//
+// 8. POLAR TO CARTESIAN
 // ============================================================
 
 function polarToXY(radius, angle) {
@@ -163,14 +143,11 @@ function polarToXY(radius, angle) {
     const theta =
         angle * Math.PI / 180;
 
-
     const x =
         radius * Math.cos(theta);
 
-
     const y =
         -radius * Math.sin(theta);
-
 
     return {
         x,
@@ -184,10 +161,7 @@ function polarToXY(radius, angle) {
 // 9. CREATE SVG ELEMENT
 // ============================================================
 
-function createSVGElement(
-    type,
-    attributes = {}
-) {
+function createSVGElement(type, attributes = {}) {
 
     const element =
         document.createElementNS(
@@ -195,11 +169,7 @@ function createSVGElement(
             type
         );
 
-
-    for (
-        const [key, value]
-        of Object.entries(attributes)
-    ) {
+    for (const [key, value] of Object.entries(attributes)) {
 
         element.setAttribute(
             key,
@@ -207,7 +177,6 @@ function createSVGElement(
         );
 
     }
-
 
     return element;
 
@@ -229,27 +198,16 @@ function drawCircle(
         createSVGElement(
             "circle",
             {
-
                 cx: 0,
-
                 cy: 0,
-
                 r: radius,
-
                 fill: fill,
-
                 stroke: VIS_COLOR,
-
-                "stroke-width":
-                    lineWidth
-
+                "stroke-width": lineWidth
             }
         );
 
-
-    group.appendChild(
-        circle
-    );
+    group.appendChild(circle);
 
 }
 
@@ -272,49 +230,32 @@ function drawRadialLine(
             angle
         );
 
-
     const p2 =
         polarToXY(
             radius2,
             angle
         );
 
-
     const line =
         createSVGElement(
             "line",
             {
-
                 x1: p1.x,
-
                 y1: p1.y,
-
                 x2: p2.x,
-
                 y2: p2.y,
-
                 stroke: VIS_COLOR,
-
-                "stroke-width":
-                    lineWidth
-
+                "stroke-width": lineWidth
             }
         );
 
-
-    group.appendChild(
-        line
-    );
+    group.appendChild(line);
 
 }
 
 
 // ============================================================
 // 12. DRAW ARC
-// ============================================================
-//
-// SVG arc geometry.
-//
 // ============================================================
 
 function drawArc(
@@ -331,30 +272,23 @@ function drawArc(
             startAngle
         );
 
-
     const end =
         polarToXY(
             radius,
             endAngle
         );
 
-
     const angleDifference =
         Math.abs(
             endAngle - startAngle
         );
-
 
     const largeArcFlag =
         angleDifference > 180
             ? 1
             : 0;
 
-
-    // Clockwise movement visually.
-
     const sweepFlag = 0;
-
 
     const pathData = `
         M ${start.x} ${start.y}
@@ -364,28 +298,18 @@ function drawArc(
           ${end.x} ${end.y}
     `;
 
-
     const path =
         createSVGElement(
             "path",
             {
-
                 d: pathData,
-
                 fill: "none",
-
                 stroke: VIS_COLOR,
-
-                "stroke-width":
-                    lineWidth
-
+                "stroke-width": lineWidth
             }
         );
 
-
-    group.appendChild(
-        path
-    );
+    group.appendChild(path);
 
 }
 
@@ -404,30 +328,17 @@ function drawConnection(
         createSVGElement(
             "line",
             {
-
                 x1: p1.x,
-
                 y1: p1.y,
-
                 x2: p2.x,
-
                 y2: p2.y,
-
                 stroke: VIS_COLOR,
-
-                "stroke-width":
-                    WORD_CONNECTION_WIDTH,
-
-                "stroke-linecap":
-                    "round"
-
+                "stroke-width": WORD_CONNECTION_WIDTH,
+                "stroke-linecap": "round"
             }
         );
 
-
-    group.appendChild(
-        line
-    );
+    group.appendChild(line);
 
 }
 
@@ -444,32 +355,21 @@ function drawLetterNode(
 
     const radius =
         Math.sqrt(
-            LETTER_NODE_SIZE
-            /
-            Math.PI
+            LETTER_NODE_SIZE / Math.PI
         );
-
 
     const circle =
         createSVGElement(
             "circle",
             {
-
                 cx: x,
-
                 cy: y,
-
                 r: radius,
-
                 fill: VIS_COLOR
-
             }
         );
 
-
-    group.appendChild(
-        circle
-    );
+    group.appendChild(circle);
 
 }
 
@@ -484,22 +384,17 @@ function drawSentence(
     rootGroup
 ) {
 
-
     // ========================================================
     // SENTENCE BELT
     // ========================================================
 
     const innerRadius =
-        CENTER_RADIUS
-        +
+        CENTER_RADIUS +
         sentenceIndex * BELT_WIDTH;
 
-
     const outerRadius =
-        CENTER_RADIUS
-        +
-        (sentenceIndex + 1)
-        * BELT_WIDTH;
+        CENTER_RADIUS +
+        (sentenceIndex + 1) * BELT_WIDTH;
 
 
     // ========================================================
@@ -516,7 +411,6 @@ function drawSentence(
 
     }
 
-
     drawCircle(
         rootGroup,
         outerRadius,
@@ -531,15 +425,11 @@ function drawSentence(
     const words =
         cleanWords(sentence);
 
-
     const numberOfWords =
         words.length;
 
-
     if (numberOfWords === 0) {
-
         return;
-
     }
 
 
@@ -558,26 +448,20 @@ function drawSentence(
     words.forEach(
         (word, wordIndex) => {
 
-
             // =================================================
             // WORD CENTER
             // =================================================
 
             const wordCenter =
-                90
-                -
+                90 -
                 wordIndex * wordAngle;
 
-
             const wordStart =
-                wordCenter
-                -
+                wordCenter -
                 wordAngle / 2;
 
-
             const wordEnd =
-                wordCenter
-                +
+                wordCenter +
                 wordAngle / 2;
 
 
@@ -587,13 +471,9 @@ function drawSentence(
 
             drawRadialLine(
                 rootGroup,
-
                 innerRadius,
-
                 outerRadius,
-
                 wordStart,
-
                 1.0
             );
 
@@ -607,19 +487,14 @@ function drawSentence(
                     .toLowerCase()
                     .split("")
                     .filter(
-                        letter =>
-                            alphabet[letter]
+                        letter => alphabet[letter]
                     );
-
 
             const numberOfLetters =
                 letters.length;
 
-
             if (numberOfLetters === 0) {
-
                 return;
-
             }
 
 
@@ -629,11 +504,9 @@ function drawSentence(
 
             const radialStep =
                 (
-                    outerRadius
-                    -
+                    outerRadius -
                     innerRadius
-                )
-                /
+                ) /
                 (
                     numberOfLetters + 1
                 );
@@ -650,24 +523,17 @@ function drawSentence(
             ) {
 
                 const radius =
-                    innerRadius
-                    +
+                    innerRadius +
                     (
                         letterIndex + 1
-                    )
-                    *
+                    ) *
                     radialStep;
-
 
                 drawArc(
                     rootGroup,
-
                     radius,
-
                     wordStart,
-
                     wordEnd,
-
                     LETTER_LINE_WIDTH
                 );
 
@@ -687,22 +553,15 @@ function drawSentence(
                 const fraction =
                     alphabetIndex / 26;
 
-
                 const angle =
-                    wordEnd
-                    -
+                    wordEnd -
                     fraction * wordAngle;
-
 
                 drawRadialLine(
                     rootGroup,
-
                     innerRadius,
-
                     outerRadius,
-
                     angle,
-
                     ALPHABET_LINE_WIDTH
                 );
 
@@ -723,54 +582,49 @@ function drawSentence(
             letters.forEach(
                 (letter, letterIndex) => {
 
-
-                    // -----------------------------------------
+                    // =========================================
                     // Y = LETTER ORDER
-                    // -----------------------------------------
+                    // =========================================
 
                     const radius =
-                        innerRadius
-                        +
+                        innerRadius +
                         (
                             letterIndex + 1
-                        )
-                        *
+                        ) *
                         radialStep;
 
 
-                    // -----------------------------------------
+                    // =========================================
                     // X = ALPHABET VALUE
-                    // -----------------------------------------
+                    // =========================================
 
                     const alphabetValue =
                         alphabet[letter];
 
 
-                    // -----------------------------------------
+                    // =========================================
                     // CENTER OF ALPHABET CELL
-                    // -----------------------------------------
+                    // =========================================
 
                     const fraction =
                         (
                             alphabetValue - 0.5
-                        )
-                        /
+                        ) /
                         26;
 
 
-                    // -----------------------------------------
+                    // =========================================
                     // CLOCKWISE
-                    // -----------------------------------------
+                    // =========================================
 
                     const angle =
-                        wordEnd
-                        -
+                        wordEnd -
                         fraction * wordAngle;
 
 
-                    // -----------------------------------------
+                    // =========================================
                     // POSITION
-                    // -----------------------------------------
+                    // =========================================
 
                     const position =
                         polarToXY(
@@ -778,21 +632,16 @@ function drawSentence(
                             angle
                         );
 
-
-                    letterPositions.push(
-                        position
-                    );
+                    letterPositions.push(position);
 
 
-                    // -----------------------------------------
+                    // =========================================
                     // NODE
-                    // -----------------------------------------
+                    // =========================================
 
                     drawLetterNode(
                         rootGroup,
-
                         position.x,
-
                         position.y
                     );
 
@@ -812,9 +661,7 @@ function drawSentence(
 
                 drawConnection(
                     rootGroup,
-
                     letterPositions[i],
-
                     letterPositions[i + 1]
                 );
 
@@ -831,7 +678,6 @@ function drawSentence(
 // ============================================================
 
 function drawVisualization() {
-
 
     // ========================================================
     // CLEAR SVG
@@ -851,33 +697,21 @@ function drawVisualization() {
     // ========================================================
 
     const maximumRadius =
-        CENTER_RADIUS
-        +
-        sentences.length
-        *
-        BELT_WIDTH;
-
+        CENTER_RADIUS +
+        sentences.length * BELT_WIDTH;
 
     const margin = 2;
 
-
     const size =
-        2
-        *
+        2 *
         (
-            maximumRadius
-            +
+            maximumRadius +
             margin
         );
 
-
     svg.setAttribute(
         "viewBox",
-
-        `${-size / 2}
-         ${-size / 2}
-         ${size}
-         ${size}`
+        `${-size / 2} ${-size / 2} ${size} ${size}`
     );
 
 
@@ -886,51 +720,29 @@ function drawVisualization() {
     // ========================================================
 
     const rootGroup =
-        createSVGElement(
-            "g"
-        );
+        createSVGElement("g");
 
-
-    svg.appendChild(
-        rootGroup
-    );
+    svg.appendChild(rootGroup);
 
 
     // ========================================================
     // EMPTY CENTER
-    // ========================================================
-    //
-    // IMPORTANT:
-    //
-    // The center stays BLACK.
-    //
     // ========================================================
 
     const center =
         createSVGElement(
             "circle",
             {
-
                 cx: 0,
-
                 cy: 0,
-
                 r: CENTER_RADIUS,
-
-                fill: "#000",
-
+                fill: "#000000",
                 stroke: VIS_COLOR,
-
-                "stroke-width":
-                    SENTENCE_LINE_WIDTH
-
+                "stroke-width": SENTENCE_LINE_WIDTH
             }
         );
 
-
-    rootGroup.appendChild(
-        center
-    );
+    rootGroup.appendChild(center);
 
 
     // ========================================================
@@ -960,40 +772,28 @@ function createSentenceInputs() {
 
     sentenceInputs.innerHTML = "";
 
-
     sentences.forEach(
         (sentence, index) => {
 
-
             const wrapper =
-                document.createElement(
-                    "div"
-                );
-
+                document.createElement("div");
 
             wrapper.className =
                 "sentence-field";
 
 
             const label =
-                document.createElement(
-                    "label"
-                );
-
+                document.createElement("label");
 
             label.textContent =
                 `Sentence ${index + 1}`;
 
 
             const textarea =
-                document.createElement(
-                    "textarea"
-                );
-
+                document.createElement("textarea");
 
             textarea.value =
                 sentence;
-
 
             textarea.dataset.index =
                 index;
@@ -1012,19 +812,11 @@ function createSentenceInputs() {
             );
 
 
-            wrapper.appendChild(
-                label
-            );
+            wrapper.appendChild(label);
 
+            wrapper.appendChild(textarea);
 
-            wrapper.appendChild(
-                textarea
-            );
-
-
-            sentenceInputs.appendChild(
-                wrapper
-            );
+            sentenceInputs.appendChild(wrapper);
 
         }
     );
@@ -1040,16 +832,13 @@ function updateSentenceCount() {
 
     let count =
         parseInt(
-            sentenceCountInput.value
+            sentenceCountInput.value,
+            10
         );
 
-
     if (isNaN(count)) {
-
         count = 1;
-
     }
-
 
     count =
         Math.max(
@@ -1060,31 +849,26 @@ function updateSentenceCount() {
             )
         );
 
-
     sentenceCountInput.value =
         count;
 
 
-    // --------------------------------------------------------
+    // ========================================================
     // ADD
-    // --------------------------------------------------------
+    // ========================================================
 
-    while (
-        sentences.length < count
-    ) {
+    while (sentences.length < count) {
 
         sentences.push("");
 
     }
 
 
-    // --------------------------------------------------------
+    // ========================================================
     // REMOVE
-    // --------------------------------------------------------
+    // ========================================================
 
-    while (
-        sentences.length > count
-    ) {
+    while (sentences.length > count) {
 
         sentences.pop();
 
@@ -1108,9 +892,13 @@ increaseButton.addEventListener(
 
         let count =
             parseInt(
-                sentenceCountInput.value
+                sentenceCountInput.value,
+                10
             );
 
+        if (isNaN(count)) {
+            count = 1;
+        }
 
         if (count < 10) {
 
@@ -1131,9 +919,13 @@ decreaseButton.addEventListener(
 
         let count =
             parseInt(
-                sentenceCountInput.value
+                sentenceCountInput.value,
+                10
             );
 
+        if (isNaN(count)) {
+            count = 1;
+        }
 
         if (count > 1) {
 
@@ -1167,22 +959,20 @@ redrawButton.addEventListener(
                 "textarea"
             );
 
-
         textareas.forEach(
             textarea => {
 
                 const index =
                     parseInt(
-                        textarea.dataset.index
+                        textarea.dataset.index,
+                        10
                     );
-
 
                 sentences[index] =
                     textarea.value;
 
             }
         );
-
 
         drawVisualization();
 
@@ -1197,7 +987,6 @@ redrawButton.addEventListener(
 colorPicker.value =
     VIS_COLOR;
 
-
 colorValue.textContent =
     VIS_COLOR.toUpperCase();
 
@@ -1209,10 +998,8 @@ colorPicker.addEventListener(
         VIS_COLOR =
             colorPicker.value;
 
-
         colorValue.textContent =
             VIS_COLOR.toUpperCase();
-
 
         drawVisualization();
 
@@ -1227,7 +1014,6 @@ colorPicker.addEventListener(
 connectionSlider.value =
     WORD_CONNECTION_WIDTH;
 
-
 connectionValue.textContent =
     WORD_CONNECTION_WIDTH.toFixed(1);
 
@@ -1241,10 +1027,8 @@ connectionSlider.addEventListener(
                 connectionSlider.value
             );
 
-
         connectionValue.textContent =
             WORD_CONNECTION_WIDTH.toFixed(1);
-
 
         drawVisualization();
 
@@ -1253,10 +1037,78 @@ connectionSlider.addEventListener(
 
 
 // ============================================================
-// 23. DOWNLOAD SVG
+// 23. ABOUT PANEL
 // ============================================================
+
+function openAbout() {
+
+    aboutPanel.classList.add("visible");
+
+    aboutPanel.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+}
+
+
+function closeAboutPanel() {
+
+    aboutPanel.classList.remove("visible");
+
+    aboutPanel.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+}
+
+
+aboutButton.addEventListener(
+    "click",
+    openAbout
+);
+
+
+closeAbout.addEventListener(
+    "click",
+    closeAboutPanel
+);
+
+
+aboutPanel.addEventListener(
+    "click",
+    event => {
+
+        if (event.target === aboutPanel) {
+
+            closeAboutPanel();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            aboutPanel.classList.contains("visible")
+        ) {
+
+            closeAboutPanel();
+
+        }
+
+    }
+);
+
+
 // ============================================================
-// 23. DOWNLOAD PNG
+// 24. DOWNLOAD PNG
 // ============================================================
 
 downloadButton.addEventListener(
@@ -1288,10 +1140,8 @@ downloadButton.addEventListener(
         const viewBox =
             svg.viewBox.baseVal;
 
-
         const svgWidth =
             viewBox.width;
-
 
         const svgHeight =
             viewBox.height;
@@ -1300,25 +1150,15 @@ downloadButton.addEventListener(
         // ----------------------------------------------------
         // PNG resolution
         // ----------------------------------------------------
-        //
-        // Higher = sharper PNG.
-        //
-        // 2 = good
-        // 4 = very high resolution
-        //
 
         const scale = 4;
 
 
         const canvas =
-            document.createElement(
-                "canvas"
-            );
-
+            document.createElement("canvas");
 
         canvas.width =
             svgWidth * scale;
-
 
         canvas.height =
             svgHeight * scale;
@@ -1335,7 +1175,6 @@ downloadButton.addEventListener(
         context.fillStyle =
             "#000000";
 
-
         context.fillRect(
             0,
             0,
@@ -1351,11 +1190,8 @@ downloadButton.addEventListener(
         const serializer =
             new XMLSerializer();
 
-
         const source =
-            serializer.serializeToString(
-                clone
-            );
+            serializer.serializeToString(clone);
 
 
         // ----------------------------------------------------
@@ -1371,11 +1207,8 @@ downloadButton.addEventListener(
                 }
             );
 
-
         const url =
-            URL.createObjectURL(
-                svgBlob
-            );
+            URL.createObjectURL(svgBlob);
 
 
         const image =
@@ -1398,58 +1231,52 @@ downloadButton.addEventListener(
                 );
 
 
-                // ------------------------------------------------
+                // --------------------------------------------
                 // Convert canvas to PNG
-                // ------------------------------------------------
+                // --------------------------------------------
 
                 canvas.toBlob(
-                    (blob) => {
+                    blob => {
+
+                        if (!blob) {
+                            URL.revokeObjectURL(url);
+                            return;
+                        }
 
                         const pngUrl =
-                            URL.createObjectURL(
-                                blob
-                            );
-
+                            URL.createObjectURL(blob);
 
                         const link =
-                            document.createElement(
-                                "a"
-                            );
-
+                            document.createElement("a");
 
                         link.href =
                             pngUrl;
 
-
                         link.download =
-                            "sentence-iris.png";
+                            "poem-iris.png";
 
-
-                        document.body.appendChild(
-                            link
-                        );
-
+                        document.body.appendChild(link);
 
                         link.click();
 
+                        document.body.removeChild(link);
 
-                        document.body.removeChild(
-                            link
-                        );
-
-
-                        URL.revokeObjectURL(
-                            pngUrl
-                        );
+                        URL.revokeObjectURL(pngUrl);
 
                     },
                     "image/png"
                 );
 
 
-                URL.revokeObjectURL(
-                    url
-                );
+                URL.revokeObjectURL(url);
+
+            };
+
+
+        image.onerror =
+            () => {
+
+                URL.revokeObjectURL(url);
 
             };
 
@@ -1460,8 +1287,9 @@ downloadButton.addEventListener(
     }
 );
 
+
 // ============================================================
-// 24. INITIALIZE
+// 25. INITIALIZE
 // ============================================================
 
 createSentenceInputs();
