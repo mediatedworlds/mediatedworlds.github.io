@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>World of Ideas</title>
+
+
+  <!-- ============================================================
+       CSS
+       ============================================================ -->
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+
+
+  <!-- ============================================================
+       THREE.JS IMPORT MAP
+       ============================================================ -->
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+
+</head>
+
+
+<body>
+
+
+  <!-- ============================================================
+       INTRO
+       ============================================================ -->
+
+  <div id="intro">
+
+    <div class="intro-content">
+
+      <div class="intro-title">
+        throw your ideas in,<br>
+        write about them,<br>
+        and make them work.
+      </div>
+
+      <div class="intro-subtitle">
+        prototype version
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       TOP BAR
+       ============================================================ -->
+
+  <div id="topBar">
+
+    <button id="aboutButton">
+      What is My Machinic Station?
+    </button>
+
+  </div>
+
+
+  <!-- ============================================================
+       ABOUT PANEL
+       ============================================================ -->
+
+  <div id="aboutPanel">
+
+    <button id="closeAbout">
+      ×
+    </button>
+
+    <div class="about-title">
+      What is My Machinic Station?
+    </div>
+
+    <div class="about-text">
+
+      <p>
+        My Machinic Station is a space where ideas are
+        metaphorized through machinic assemblages.
+        It's a term I borrow from Gilles Deleuze and
+        Félix Guattari.
+      </p>
+
+      <p>
+        An assemblage is a temporary collection of things,
+        people, tools, and relations that come together
+        for a reason. Through these assemblages, desires
+        can take form and express themselves.
+      </p>
+
+      <p>
+        I want to connect to people through my weirdest,
+        rawest, unfinished ideas.
+      </p>
+
+      <p>
+        An idea does not exist by itself. It works through
+        an assemblage: me, my keyboard, AI, my website,
+        my philosophical books, the people I encounter.
+      </p>
+
+      <p>
+        If one part disappears, another has to take its
+        place so that the desire can continue to express itself.
+      </p>
+
+      <p>
+        This is a prototype for experimenting with that process.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       FIRST QUESTION
+       ============================================================ -->
+
+  <div
+    id="startBox"
+    class="question-box center"
+  >
+
+    <h1>
+      Do you have an idea?
+    </h1>
+
+    <button id="yesIdea">
+      Yes
+    </button>
+
+    <button id="noIdea">
+      No
+    </button>
+
+  </div>
+
+
+  <!-- ============================================================
+       IDEA
+       ============================================================ -->
+
+  <div
+    id="ideaBox"
+    class="question-box left"
+  >
+
+    <h2>
+      What is your idea?
+    </h2>
+
+    <input
+      id="ideaInput"
+      type="text"
+      placeholder="Name your idea"
+    >
+
+    <button id="continueIdea">
+      Continue
+    </button>
+
+  </div>
+
+
+  <!-- ============================================================
+       CONNECTION
+       ============================================================ -->
+
+  <div
+    id="connectionBox"
+    class="question-box left"
+  >
+
+    <h2>
+      What connects you to this idea?
+    </h2>
+
+    <textarea
+      id="connectionInput"
+      placeholder="Write your answer..."
+    ></textarea>
+
+    <button id="createBelt">
+      Add idea
+    </button>
+
+  </div>
+
+
+  <!-- ============================================================
+       OBJECT INFORMATION
+       ============================================================ -->
+
+  <div id="info"></div>
+
+
+  <!-- ============================================================
+       BOTTOM RIGHT CONTROLS
+       ============================================================ -->
+
+  <div id="fileControls">
+
+    <button id="addIdea">
+      + Add another idea
+    </button>
+
+    <button id="saveJSON">
+      Save JSON
+    </button>
+
+    <button id="uploadJSON">
+      Upload JSON
+    </button>
+
+    <input
+      id="jsonFileInput"
+      type="file"
+      accept=".json,application/json"
+      hidden
+    >
+
+  </div>
+
+
+  <!-- ============================================================
+       MAIN JAVASCRIPT
+       ============================================================ -->
+
+  <script
+    type="module"
+    src="./main.js"
+  ></script>
+
+
+</body>
+
+</html>
